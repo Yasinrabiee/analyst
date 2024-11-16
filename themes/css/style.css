@@ -30,7 +30,8 @@ textarea {
 
 #main_container {
 	margin: 0 auto;
-	max-width: 400px;
+	width: 100%;
+	max-width: 600px;
 	margin-block-start: 10px;
 }
 
