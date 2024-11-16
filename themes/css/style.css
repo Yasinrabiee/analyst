@@ -1,0 +1,48 @@
+@font-face {
+    src: url(../fonts/Vazirmatn-Regular.woff2);
+    font-family: Vazir;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: inherit;
+}
+
+body {
+	font-family: Vazir;
+	background-color: #FAFAFA;
+}
+
+textarea {
+	resize: vertical;
+}
+
+#container {
+	display: flex;
+	justify-content: center;
+}
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+#main_container {
+	margin: 0 auto;
+	max-width: 400px;
+	margin-block-start: 10px;
+}
+
+.accordion-body {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+hr {
+	margin: 0;
+	background-color: silver;
+	color: silver;
+	border-radius: 10px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text Analyzer</title>
+	<link rel="stylesheet" href="themes/css/bootstrap.rtl.min.css">
+	<link rel="stylesheet" href="themes/css/style.css">
+	<script src="themes/js/popper.min.js"></script>
+	<script src="themes/js/bootstrap.min.js"></script>
+	<script src="themes/js/jquery.min.js"></script>
+	<script src="themes/js/script.js" defer></script>
+</head>
+<body> 
+	<div id="main_container">
+		<div class="accordion" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						متن خود را برای استخراج وارد کنید:
+					</button>
+				</h2>
+				<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<textarea class="form-control" id="text" rows="5" style="resize: none;" autofocus></textarea>
+						<button class="btn text-bg-dark" id="analyze">استخراج</button>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="extracted">
+						محتوای استخراج شده
+					</button>
+				</h2>
+				<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div>طول متن: <span id="text-length"></span></div>
+						<hr>
+						<div>طول متن بدون فاصله: <span id="text-ex-space"></span></div>
+						<hr>
+						<div>تعداد کلمات: <span id="words"></span></div>
+						<hr>
+						<div>تعداد جملات: <span id="sentences"></span></div>
+						<hr>
+						<div>تعداد اعداد فارسی: <span id="numbers-fa"></span></div>
+						<hr>
+						<div>تعداد اعداد انگلیسی: <span id="numbers-en"></span></div>
+						<hr>
+						<div>تعداد فاصله: <span id="space"></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
