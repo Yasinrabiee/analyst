@@ -4,11 +4,10 @@ $(`#analyze`).click(function() {
 	const textExSpace = text.split(` `);
 	const sentences = text.match(/\./g);
 	const numbersEn = text.match(/[1-9]/g);
-	const numbersFa = text.match(/[۱-۹]/g)
+	const numbersFa = text.match(/[۱-۹]/g);
 	const spaces = text.match(/ /g);
 	$(`#extracted`).click();
-	// $(`#collapseOne`).removeClass(`show`);
-	$(`#collapseTwo`).addClass(`show`);
+	// $(`#collapseTwo`).addClass(`show`);
 	$(`#text-length`).html(textLength);
 	$(`#text-ex-space`).html(textLength - textExSpace.length + 1);
 	console.log(textExSpace);

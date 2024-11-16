@@ -11,6 +11,8 @@
 body {
 	font-family: Vazir;
 	background-color: #FAFAFA;
+	height: 100vh;
+/*	overflow: hidden;*/
 }
 
 textarea {
