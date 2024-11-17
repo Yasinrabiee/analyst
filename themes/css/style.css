@@ -11,6 +11,7 @@
 body {
 	font-family: Vazir;
 	background-color: #FAFAFA;
+	font-size: 18px;
 	height: 100vh;
 }
 
@@ -34,6 +35,7 @@ textarea {
 	width: 100%;
 	max-width: 600px;
 	margin-block-start: 20px;
+	margin-block-end: 40px;
 }
 
 .accordion-body {
@@ -47,4 +49,9 @@ hr {
 	background-color: silver;
 	color: silver;
 	border-radius: 10px;
+}
+
+.accordion-body div{
+	display: flex;
+	justify-content: space-between;
 }
