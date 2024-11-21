@@ -52,9 +52,9 @@ hr {
 }
 
 .not-include {
-	color: #000 !important;
-	background-color: #000 !important;
-	height: 2px !important;
+	color: #000;
+	background-color: #000;
+	height: 2px;
 }
 
 .accordion-body div{
