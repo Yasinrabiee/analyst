@@ -51,6 +51,12 @@ hr {
 	border-radius: 10px;
 }
 
+.not-include {
+	color: #000 !important;
+	background-color: #000 !important;
+	height: 2px !important;
+}
+
 .accordion-body div{
 	display: flex;
 	justify-content: space-between;
