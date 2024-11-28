@@ -61,7 +61,7 @@ $(`#analyze`).click(function() {
 	totalLetterEn(text);
 	$(`html`).animate({
 		scrollTop: $(`#info-bar`).position().top
-	}, 750);
+	}, 500);
 	document.querySelectorAll(`.letters`).forEach(function(item) {
 		if(item.innerHTML === `0`) {
 			item.parentNode.style.display = `none`;
