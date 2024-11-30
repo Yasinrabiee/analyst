@@ -46,7 +46,7 @@ $(`#analyze`).click(function() {
 	const textLength = text.length;
 	const textExSpace = text.split(` `);
 	const sentences = text.match(/\./g);
-	const numbersEn = text.match(/[1-9]/g);
+	const numbersEn = text.match(/[1-9]+/g);
 	const numbersFa = text.match(/[۱-۹]/g);
 	const spaces = text.match(/ /g);
 	$(`#extracted`).click();
