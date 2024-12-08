@@ -13,6 +13,7 @@ body {
 	background-color: #FAFAFA;
 	font-size: 18px;
 	height: 100vh;
+	padding: 1rem;
 }
 
 textarea {
