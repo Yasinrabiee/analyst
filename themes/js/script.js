@@ -21,6 +21,10 @@ for(let i = 0; i < lettersEn.length; i++) {
 	`);
 }
 
+function onlyUnique(value, index, array) {
+	return array.indexOf(value) === index;
+}
+
 function totalLetterFa(text) {
 	const total = [];
 	for(let i = 0; i < lettersFa.length; i++) {
@@ -41,6 +45,28 @@ function totalLetterEn(text) {
 	}
 }
 
+function totalWords(text) {
+	text = text.replace(/\s+/g, ` `);
+	let words = text.split(` `);
+	words = words.filter(onlyUnique);
+	words = words.filter(function(e) {
+		return e;
+	});
+	console.log(text);
+	console.log(words);
+	for(let i = 0; i < words.length; i++) {
+		let re = new RegExp(words[i], "g");
+		let repeat = text.match(re);
+		console.log(`${words[i]}: ${repeat.length}`);
+	}
+}
+
+function wordsFunction(text) {
+	text = text.replace(/\s+/g, ` `);
+	const words = text.split(` `);
+	return words.length;
+}
+
 $(`#analyze`).click(function() {
 	const text = $(`#text`).val();
 	const textLength = text.length;
@@ -52,13 +78,14 @@ $(`#analyze`).click(function() {
 	$(`#extracted`).click();
 	$(`#text-length`).html(textLength);
 	$(`#text-ex-space`).html(textLength - textExSpace.length + 1);
-	$(`#words`).html(textExSpace.length);
+	$(`#words`).html(wordsFunction(text));
 	$(`#sentences`).html(sentences == undefined ? 0 : sentences.length);
 	$(`#numbers-en`).html(numbersEn == undefined ? 0 : numbersEn.length);
 	$(`#numbers-fa`).html(numbersFa == undefined ? 0 : numbersFa.length);
 	$(`#space`).html(spaces == undefined ? 0 : spaces.length);
 	totalLetterFa(text);
 	totalLetterEn(text);
+	totalWords(text);
 	$(`html`).animate({
 		scrollTop: $(`#info-bar`).position().top
 	}, 500);
