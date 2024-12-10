@@ -21,6 +21,14 @@ for(let i = 0; i < lettersEn.length; i++) {
 	`);
 }
 
+$(`#accordion-info`).append(`
+	<div id="letters-bar">
+		<div style="font-size: 19px;"><b>کلمه</b></div>
+		<div style="font-size: 19px;"><b>تکرار</b></div>
+	</div>
+	<hr class="not-include">
+`);
+
 function onlyUnique(value, index, array) {
 	return array.indexOf(value) === index;
 }
@@ -52,12 +60,20 @@ function totalWords(text) {
 	words = words.filter(function(e) {
 		return e;
 	});
-	console.log(text);
-	console.log(words);
 	for(let i = 0; i < words.length; i++) {
-		let re = new RegExp(words[i], "g");
-		let repeat = text.match(re);
-		console.log(`${words[i]}: ${repeat.length}`);
+		$(`#accordion-info`).append(`
+			<div>
+				<div id="word-${i}">" ${words[i]} "</div>
+				<div id="total-word-${i}" class="words"></div>
+			</div>
+			<hr>
+		`);
+	}
+	const total = [];
+	for(let i = 0; i < words.length; i++) {
+		let re = new RegExp([words[i]],"g");
+		total[i] = text.match(re);
+		$(`#total-word-${i}`).html(total[i].length);
 	}
 }
 
