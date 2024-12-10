@@ -33,6 +33,13 @@ function onlyUnique(value, index, array) {
 	return array.indexOf(value) === index;
 }
 
+function checkDir(text) {
+	const ch = text.charCodeAt(0);
+	if(ch >= 65 && ch <= 122)
+		return true;
+	return false;
+}
+
 function totalLetterFa(text) {
 	const total = [];
 	for(let i = 0; i < lettersFa.length; i++) {
@@ -112,4 +119,11 @@ $(`#analyze`).click(function() {
 			item.parentNode.nextElementSibling.style.display = `none`;
 		}
 	});
+});
+
+$(`#text`).on('input', function() {
+	if(checkDir($(this).val()))
+		$(`#text`).css(`direction`, `ltr`);
+	else
+		$(`#text`).css(`direction`, `rtl`);
 });
