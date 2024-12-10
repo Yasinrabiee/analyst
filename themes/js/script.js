@@ -79,7 +79,6 @@ function totalWords(text) {
 	const total = [];
 	for(let i = 0; i < words.length; i++) {
 		let re = new RegExp(words[i],"g");
-		console.log(text);
 		total[i] = text.match(re);
 		$(`#total-word-${i}`).html(total[i].length);
 	}
